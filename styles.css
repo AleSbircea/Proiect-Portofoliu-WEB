@@ -1,0 +1,121 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color:#ffe4f2;
+  color: #333;
+}
+
+
+nav {
+  background-color: #e63281;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 60px 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+#profil {
+  text-align: center;
+}
+
+#profil img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#profil h1 {
+  margin-top: 16px;
+  font-size: 28px;
+}
+
+.rol {
+  color: #666;
+  margin-top: 8px;
+}
+
+.descriere {
+  margin-top: 12px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+  background-color: #e63281;
+  color: white;
+}
+/* ── TABLETA (max 768px) ── */
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  #profil img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* ── TELEFON (max 480px) ── */
+@media (max-width: 480px) {
+
+  nav .logo {
+    font-size: 16px;
+  }
+
+  #profil h1 {
+    font-size: 22px;
+  }
+
+  section {
+    padding: 30px 16px;
+  }
+}
