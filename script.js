@@ -1,5 +1,5 @@
 
-const GITHUB_USERNAME = 'AleSbîrcea'; 
+const GITHUB_USERNAME = 'AleSbircea'; 
 
 const FALLBACK_REPOS = [
   {
@@ -41,15 +41,9 @@ const FALLBACK_REPOS = [
 async function incarcaProiecte() {
   const grid = document.getElementById('grid-proiecte');
 
-
-  grid.innerHTML = '<p>Se încarcă proiectele...</p>';
-
+  document.getElementById('loading').style.display = 'flex';
+  grid.innerHTML = '';
   try {
-    if (proiecteProprii.length < 5) {
-    grid.innerHTML = '<p class="mesaj-fallback">⚠️ Sunt puține proiecte pe GitHub. Se afișează proiecte demo.</p>';
-     setTimeout(() => afiseazaCarduri(FALLBACK_REPOS), 1500);
-     return;
-    }
     const raspuns = await fetch(
       `https://api.github.com/users/${GITHUB_USERNAME}/repos`
     );
@@ -62,17 +56,23 @@ async function incarcaProiecte() {
 
    
     const proiecteProprii = proiecte.filter(p => p.fork === false);
+       document.getElementById('loading').style.display = 'none';
 
-    if (proiecteProprii.length === 0) {
-      throw new Error('Niciun proiect găsit');
+    if (proiecteProprii.length < 5) {
+    grid.innerHTML = '<p class="mesaj-fallback"> ATENȚIE: Sunt puține proiecte pe GitHub! Se afișează proiectele demo.</p>';
+     setTimeout(() => afiseazaCarduri(FALLBACK_REPOS), 1500);
+     return;
     }
 
+      document.getElementById('loading').style.display = 'none';
     afiseazaCarduri(proiecteProprii);
 
-  } catch (eroare) {
-    console.warn('Folosim fallback:', eroare.message);
-    afiseazaCarduri(FALLBACK_REPOS);
-  }
+   } catch (eroare) {
+  document.getElementById('loading').style.display = 'none';
+  console.warn('Folosim fallback:', eroare.message);
+  grid.innerHTML = '<p class="mesaj-eroare">Nu am putut încărca proiectele. Se afișează proiecte demo.</p>';
+  setTimeout(() => afiseazaCarduri(FALLBACK_REPOS), 1500);
+}
 }
 
 
@@ -89,10 +89,11 @@ function afiseazaCarduri(proiecte) {
       <p class="descriere-proiect">
         ${proiect.description || 'Fără descriere disponibilă.'}
       </p>
-      <p class="limbaj">💻 ${proiect.language || 'Necunoscut'}</p>
-      <p class="statistici">
-        ⭐ ${proiect.stargazers_count} &nbsp; 🍴 ${proiect.forks_count}
-      </p>
+      <span class="tag-limbaj">${proiect.language || 'Necunoscut'}</span>
+      <div class="statistici">
+        <span>${proiect.stargazers_count} stele</span>
+        <span>${proiect.forks_count} fork-uri</span>
+      </div>
       <a href="${proiect.html_url}" target="_blank" class="btn-github">
         Vezi pe GitHub →
       </a>

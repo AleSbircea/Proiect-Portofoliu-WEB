@@ -150,7 +150,7 @@ footer {
   }
 }
 .mesaj-fallback {
-  color: #e63281;
+  color: #e50a69;
   font-style: italic;
   margin-bottom: 16px;
 }
@@ -202,4 +202,60 @@ footer {
 
 .btn-github:hover {
   background-color: #c0256d;
+}
+
+.tag-limbaj {
+  display: inline-block;
+  background-color: #ffe4f2;
+  color: #e63281;
+  border: 1px solid #e63281;
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.statistici {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: #888;
+}
+
+.mesaj-eroare {
+  color: #c0256d;
+  background: #ffe4f2;
+  border: 1px solid #e63281;
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin-bottom: 16px;
+}
+
+.job {
+  border-left: 3px solid #e63281;
+  padding-left: 16px;
+  margin-bottom: 24px;
+}
+
+
+#loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px;
+  color: #e63281;
+}
+
+.spinner {
+  width: 44px;
+  height: 44px;
+  border: 4px solid #ffe4f2;
+  border-top: 4px solid #e63281;
+  border-radius: 50%;
+  animation: rotire 0.8s linear infinite;
+}
+
+@keyframes rotire {
+  to { transform: rotate(360deg); }
 }
