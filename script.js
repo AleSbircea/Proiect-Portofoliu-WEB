@@ -127,6 +127,8 @@ function afiseazaCarduri(proiecte) {
         <span>${proiect.forks_count} fork-uri</span>
       </div>
      <a href="${proiect.html_url}" target="_blank" class="btn-github">Vezi pe GitHub</a>
+    `;
+    grid.appendChild(card);
     grid.appendChild(card);
   });
 
