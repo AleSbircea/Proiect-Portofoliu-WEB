@@ -9,7 +9,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color:#ffe4f2;
-  color: #333;
+  color: #0e0f21;
 }
 
 
@@ -179,13 +179,13 @@ footer {
 
 .descriere-proiect {
   font-size: 14px;
-  color: #555;
+  color: #0d0420;
   flex: 1;
 }
 
 .limbaj, .statistici {
   font-size: 13px;
-  color: #0c0a0f;
+  color: #1a0a08;
 }
 
 .btn-github {
@@ -258,4 +258,39 @@ footer {
 
 @keyframes rotire {
   to { transform: rotate(360deg); }
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.controls select {
+  padding: 8px 16px;
+  border: 1px solid #e63281;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.controls select:focus {
+  outline: none;
+  border-color: #c0256d;
+}
+
+.controls input {
+  padding: 8px 16px;
+  border: 1px solid #e63281;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  width: 220px;
+}
+
+.controls input:focus {
+  border-color: #c0256d;
 }

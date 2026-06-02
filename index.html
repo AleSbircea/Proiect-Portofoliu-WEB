@@ -95,11 +95,23 @@
 
     <section id="proiecte">
     <h2>Proiectele Mele</h2>
+  <div class="controls">
+  <input type="text" id="cautare" placeholder="Caută proiect...">
+  <select id="sortare">
+      <option value="updated">Sortare: Data actualizării</option>
+      <option value="stars">Sortare: Număr stele</option> 
+    </select>
+  </div>
     <div id="loading">
     <div class="spinner"></div>
     <p>Se încarcă proiectele...</p>
     </div>
     <div id="grid-proiecte"></div>
+    <div style="text-align:center; margin-top: 24px;">
+    <button id="btn-load-more" style="display:none" class="btn-github">
+     Încarcă mai multe
+    </button>
+    </div>
   </section>
 
 
