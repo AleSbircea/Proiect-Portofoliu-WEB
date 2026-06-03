@@ -129,7 +129,7 @@ function afiseazaCarduri(proiecte) {
      <a href="${proiect.html_url}" target="_blank" class="btn-github">Vezi pe GitHub</a>
     `;
     grid.appendChild(card);
-    grid.appendChild(card);
+    
   });
 
   
@@ -146,7 +146,7 @@ document.getElementById('cautare').addEventListener('input', () => {
 });
 
 document.getElementById('btn-load-more').addEventListener('click', () => {
-  proiecteAfisate += 6;
+  proiecteAfisate += 2;
   afiseazaCarduri(proiecteGlobale);
 });
 
