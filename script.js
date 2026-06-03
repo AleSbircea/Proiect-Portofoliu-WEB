@@ -1,7 +1,7 @@
 
 const GITHUB_USERNAME = 'AleSbircea'; 
 let proiecteGlobale = [];
-let proiecteAfisate = 6;
+let proiecteAfisate = 2;
 const FALLBACK_REPOS = [
 
   {
