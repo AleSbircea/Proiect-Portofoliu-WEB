@@ -6,7 +6,7 @@ const FALLBACK_REPOS = [
 
   {
     name: "management-parc-auto",
-    description: "Aplicație pentru gestionarea unui parc auto.",
+    description: "Sistem de gestiune a unui parc auto. Aplicație web pentru monitorizarea vehiculelor, șoferilor, mentenanței și a documentelor obligatorii (asigurări, viniete).",
     language: "PHP, HTML, CSS, JavaScript",
     stargazers_count: 5,
     forks_count: 0,
