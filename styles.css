@@ -173,6 +173,8 @@ footer {
 }
 
 .card-proiect h3 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   color: #e63281;
   font-size: 16px;
 }
