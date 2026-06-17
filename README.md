@@ -26,4 +26,4 @@ Site personal de portofoliu cu integrare GitHub API.
 ## Instalare locală
 1. Clonează repository-ul: https://github.com/AleSbircea/Proiect-Portofoliu-WEB 
 2. Deschide folderul în VS Code
-3. Pornește XAMPP și accesează: file:///C:/xampp/htdocs/Proiect%20Portofoliu-WEB/
+3. Pornește XAMPP (Apache) și accesează în browser: http://localhost/Proiect-Portofoliu-WEB/index.html
